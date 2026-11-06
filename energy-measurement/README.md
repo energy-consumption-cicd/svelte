@@ -60,8 +60,8 @@ gh workflow run energy-measurement.yml -f campaign=full
 `validation` runs run 0 only. `full` runs a discarded warm-up plus runs 1..10 and
 writes the medians. Each run rests 120 s to measure the idle baseline; an idle
 package rate above 1.0 W aborts the run before the first stage (exit 90), since
-the bench is then not idle. A stage that exceeds its ceiling (51 s for
-`build`, 81 s for `test`) is killed (exit 91) and the run is substituted, at
+the bench is then not idle. A stage that exceeds its ceiling (190 s for
+`build`, 158 s for `test`) is killed (exit 91) and the run is substituted, at
 most twice per campaign. `--network none`, `--privileged`, `--memory=12g` and
 `--memory-swap=12g` on every measured container.
 
